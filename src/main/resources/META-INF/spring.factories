@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.zuijianren.jpaSwaggerSqlserverAutoComment.core.SqlServerCommentAutoInitializing,\
+  com.zuijianren.jpaSwaggerSqlserverAutoComment.core.SqlServerCommentConfig

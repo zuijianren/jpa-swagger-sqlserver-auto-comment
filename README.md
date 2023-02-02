@@ -17,9 +17,6 @@
 
 > 即 需要有 swagger 和 jpa 的依赖才可以正常使用
 
->
-> tips: 需要添加扫描路径, 确保 `com.zuijianren.jpaSwaggerSqlserverAutoComment.core` 文件可以被扫描到, 否则不会执行
-
 ### 安装依赖
 
 > 由于本身只是一个小工具包, 因此并未上传 maven 仓库, 需要下载后手动安装到本地仓库才能使用
