@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "auto-comment.sqlserver.comment",
+      "type": "com.zuijianren.jpaSwaggerSqlserverAutoComment.core.SqlServerCommentConfig",
+      "sourceType": "com.zuijianren.jpaSwaggerSqlserverAutoComment.core.SqlServerCommentConfig",
+      "description": "sqlserver自动添加注释配置"
+    }
+  ],
+  "properties": [
+    {
+      "name": "auto-comment.sqlserver.comment.auto-add",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zuijianren.jpaSwaggerSqlserverAutoComment.core.SqlServerCommentConfig",
+      "description": "是否自动添加字段注释",
+      "defaultValue": false
+    },
+    {
+      "name": "auto-comment.sqlserver.comment.entity-packages",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.zuijianren.jpaSwaggerSqlserverAutoComment.core.SqlServerCommentConfig",
+      "description": "需要添加注释的实体类所在位置(包名)"
+    },
+    {
+      "name": "auto-comment.sqlserver.comment.show-sql",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.zuijianren.jpaSwaggerSqlserverAutoComment.core.SqlServerCommentConfig",
+      "description": "是否展示添加注释的sql",
+      "defaultValue": false
+    }
+  ],
+  "hints": []
+}
