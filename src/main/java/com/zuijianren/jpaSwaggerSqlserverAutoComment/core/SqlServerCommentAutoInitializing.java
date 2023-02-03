@@ -11,7 +11,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import java.io.File;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
+import java.net.URL;
+import java.net.URLDecoder;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -178,8 +181,15 @@ public class SqlServerCommentAutoInitializing implements SmartInitializingSingle
      */
     private void doScan(String basePackage) {
         // 获取 需要 添加注解的实体类
-        String path = SqlServerCommentAutoInitializing.class.getClassLoader().getResource("").getPath();
+        URL url = SqlServerCommentAutoInitializing.class.getClassLoader().getResource("");
+        assert url != null;
+        String path = url.getPath();
         String entityFilePath = basePackage.replaceAll("\\.", "/");
+        try {
+            path = URLDecoder.decode(path, "utf-8");
+        } catch (UnsupportedEncodingException e) {
+            log.error("url编码异常");
+        }
         File file = new File(path + entityFilePath);
         File[] files = file.listFiles();
         if (files == null) {
